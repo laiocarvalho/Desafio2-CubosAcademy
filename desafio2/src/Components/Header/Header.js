@@ -10,7 +10,7 @@ export default function Header() {
         <div className="main-header">
             <div className="centraliza-main-header">
                 <div>
-                    <img src={Logo} className="main-header-logo"/>
+                    <img src={Logo} className="main-header-logo" alt="#"/>
                     <div className="input-button-conteiner">
                     <input className="main-header-search-input"type="text" placeholder="Pesquise filmes.."/>
                     <button className="main-header-search-button"><BsSearch/></button>
@@ -23,7 +23,7 @@ export default function Header() {
 
                 <div className="main-header-profile-information">
                     <span>Bem vindo fulano</span>
-                    <img src="https://picsum.photos/200"  className="main-header-profile-image"/>
+                    <img src="https://picsum.photos/200"  className="main-header-profile-image" alt="#"/>
                 </div>
             </div>
             

@@ -1,0 +1,6 @@
+.cardmovie-list{
+    display: flex;
+    border: 1px solid yellow;
+    justify-content: space-between;
+    margin-top: 10px;
+}
