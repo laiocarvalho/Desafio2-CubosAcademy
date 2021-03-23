@@ -9,7 +9,7 @@ export default function EmptyShoplist() {
             <p>adicione filmes agora</p>
         </div>
         
-        <img className="imagem-teste"src={empty} alt="#" />
+        <img className="empty-shoplist-image"src={empty} alt="#" />
     </div>
     )
 }

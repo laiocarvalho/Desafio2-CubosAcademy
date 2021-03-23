@@ -1,0 +1,21 @@
+
+.carrinhocomcompra{
+    display: flex;
+    background-color: gray;
+    width: 100%;
+}
+
+.botaodecompra{
+    position: absolute;
+    bottom: 15px;
+    left: 33px;
+    outline: none;
+    background-color: #E183C8;
+    border: none;
+    color: white;
+    padding: 3px ;
+    cursor: pointer;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+

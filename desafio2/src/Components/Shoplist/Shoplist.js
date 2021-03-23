@@ -8,7 +8,7 @@ import ContentShoplist from './ContentShoplist/ContentShoplist';
 
 
 export default function Shoplist() {
-    const [shopList, setShopList] = useState(false);
+    const [shopList, setShopList] = useState([]);
 
     return (
         <div className="shoplist-conteiner">
@@ -16,17 +16,17 @@ export default function Shoplist() {
                 <div className="shoplist-header-content-conteiner">
                     <img src={bag} alt="#" />
                     <span>Sacola</span>
+                    <span></span>
                 </div>
             </div>
 
             <div className="shoplist-content">
-                {shopList? <ContentShoplist /> : <EmptyShoplist />}
+                {shopList.length > 0 ? <ContentShoplist /> : <EmptyShoplist />}
             </div>
             <div className="shoplist-conteiner-footer">
                 <p>Insira seu cupom</p>
-                <input className="shoplist-cupom-input"type="text" placeholder="Cupom de desconto"></input>
+                <input className="shoplist-cupom-input" type="text" placeholder="Cupom de desconto"></input>
             </div>
-            
         </div>
     )
 }

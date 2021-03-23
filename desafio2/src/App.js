@@ -6,10 +6,12 @@ import MainContent from './Components/Main-Content/MainContent';
 
 
 function App() {
+  
   return (
     <div className="App">
       <Header />
       <MainContent />
+      
     </div>
   );
 }

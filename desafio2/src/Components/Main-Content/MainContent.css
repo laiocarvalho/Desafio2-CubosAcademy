@@ -2,19 +2,18 @@
     display: flex;
     border: 1px solid red;
     min-height: 100vh;
-    max-width: 100vw;
     align-items: flex-start;
-    
 }
 
 .main-content-column{
-    min-width: 65%;
     border: 2px solid purple;
     display: flex;
     flex-direction: column;
     margin-left: 90px;
     position: relative;
     min-height: 100vh;
+    min-width: 945px;
+    max-width: 945px;
 }
 
 .main-content-titles{
@@ -24,10 +23,33 @@
     margin-top: 20px;
 }
 
-.r{
-    display: flex;
+.main-content-genres-list{
     list-style-type: none;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+
+.main-content-genres-list-field{
+    visibility: hidden;
+}
+
+.main-content-genre-title{
+    border: 1px solid white;
+    padding: 10px 35px;
+    color: white;
+    min-width: 130px;
+    text-align: center;
+    cursor: pointer;
+}
+
+ .main-content-genres-list-field:checked + .main-content-genre-title{
+    background-color: rgba(225, 131, 200, 0.2);
+    border: 1px solid #E183C8;
+}
+
+
 
 .aside-column{
     width: 40vw;
