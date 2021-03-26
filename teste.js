@@ -12,8 +12,13 @@ const arr = [
 
 const filtragenero=(el)=>{
    if(el.genero_ids.indexOf(16) != -1){
-       return el.genero_ids
-   }
+       
+    
+    return   el.genero_ids
+   
+   
+   
+    }
 }
 
 

@@ -7,9 +7,8 @@ import ContentShoplist from './ContentShoplist/ContentShoplist';
 
 
 
-export default function Shoplist() {
-    const [shopList, setShopList] = useState([]);
-
+export default function Shoplist({ inputValue, shoplist }) {
+    
     return (
         <div className="shoplist-conteiner">
             <div className="shoplist-header">
@@ -21,11 +20,11 @@ export default function Shoplist() {
             </div>
 
             <div className="shoplist-content">
-                {shopList.length > 0 ? <ContentShoplist /> : <EmptyShoplist />}
+                {shoplist.length > 0 ? <ContentShoplist /> : <EmptyShoplist />}
             </div>
             <div className="shoplist-conteiner-footer">
                 <p>Insira seu cupom</p>
-                <input className="shoplist-cupom-input" type="text" placeholder="Cupom de desconto"></input>
+                <input className="shoplist-cupom-input" type="text" value={inputValue} placeholder="Cupom de desconto"></input>
             </div>
         </div>
     )
