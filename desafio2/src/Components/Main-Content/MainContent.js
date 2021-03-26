@@ -39,8 +39,6 @@ export default function MainContent() {
         const genero = target.value;     
         setgenero(genero)  
     }
-       
-        
    
     return (
         <div className="main-content-conteiner">
