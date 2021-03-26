@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import BannerPromocional from '../BannerPromocional/BannerPromocional'
-import CardMovieList from '../CardMovie/CardMovieList/CardMovieList'
 import CardMovieListAll from '../CardMovie/CardMovieListAll/CardMovieListAll'
 import Shoplist from '../Shoplist/Shoplist'
 import './MainContent.css'

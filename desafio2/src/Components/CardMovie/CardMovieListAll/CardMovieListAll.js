@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import CardMovie from '../CardMovie'
-import '../CardMovieList/CardMovieList.css'
+import './CardMovieListAll.css'
 import json from '../genres.json'
 
 export default function CardMovieListAll({ genre, listLength, filtragenero}) {
@@ -30,7 +30,7 @@ console.log(filtragenero)
             setLoading(false)
         });
     },[genre])
-    
+
     if (genreData != undefined) {
         fetch(`https://tmdb-proxy-workers.vhfmag.workers.dev/3/discover/movie?with_genres=${genreData.id}&language=pt-BR`)
         .then((response)=>{

@@ -3,11 +3,6 @@ import banner from "../../Images/Banner.png";
 import "./BannerPromocional.css";
 import money from "../../Images/money.png";
 
-export default function BannerPromocional({ onClick }) {
-  const [visibility, setvisibility] = useState(true);
-
-
-
 export default function BannerPromocional ({ onClick }) {
     const [visibility, setvisibility] = useState(true);
     return (
@@ -32,4 +27,4 @@ export default function BannerPromocional ({ onClick }) {
         </div> 
     )
   }
-}
+
