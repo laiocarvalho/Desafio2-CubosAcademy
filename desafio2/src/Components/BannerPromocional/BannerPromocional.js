@@ -5,6 +5,7 @@ import money from "../../Images/money.png";
 
 export default function BannerPromocional ({ onClick }) {
     const [visibility, setvisibility] = useState(true);
+    const [textodocupom,settestodocupom] = useState("HTMLNAOELINGUAGEM")
     return (
         <div>
             {visibility ? 
@@ -15,11 +16,11 @@ export default function BannerPromocional ({ onClick }) {
                         <h2>Aproveite Agora</h2>
                         <h3>Cupom:  <span className="cupomtext" onClick={()=>{
                             setvisibility(!visibility);
-                            onClick();
-                        }}>htmlnaoelinguagem</span></h3>
+                            onClick(textodocupom);
+                        }}>{textodocupom}</span></h3>
                     </div> 
                     <div className="banner-right-information">
-                        <p>Dale</p>
+                        
                     </div>            
                 </div>
                 : ''

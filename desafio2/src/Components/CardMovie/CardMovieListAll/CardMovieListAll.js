@@ -3,7 +3,7 @@ import CardMovie from '../CardMovie'
 import './CardMovieListAll.css'
 import json from '../genres.json'
 
-export default function CardMovieListAll({ genre, listLength, filtragenero}) {
+export default function CardMovieListAll({ genre, listLength,catchmovieinformation} ) {
     const url= "https://tmdb-proxy-workers.vhfmag.workers.dev/3/discover/movie?language=pt-BR";    
     
     const [movieInformation, setMovieInformation]= useState([]);
@@ -13,7 +13,7 @@ export default function CardMovieListAll({ genre, listLength, filtragenero}) {
     const [topGenres, setTopGenres] = useState([]);
     
     
-console.log(filtragenero)
+
     useEffect(()=>{
         fetch(url)
         .then((response)=>{
@@ -30,8 +30,8 @@ console.log(filtragenero)
             setLoading(false)
         });
     },[genre])
-
-    if (genreData != undefined) {
+    
+    if (genreData !== undefined) {
         fetch(`https://tmdb-proxy-workers.vhfmag.workers.dev/3/discover/movie?with_genres=${genreData.id}&language=pt-BR`)
         .then((response)=>{
             return response.json();
@@ -42,13 +42,15 @@ console.log(filtragenero)
     }
     
     return (
+     
+        
         <div className="cardmovie-list">   
             {listLength === 5  
-            ? loading ? <div>Loading</div> : top5Movies.map((movies) => <CardMovie key ={movies.id} {...movies}/>) 
+            ? loading ? <div>Loading</div> : top5Movies.map((movies) => <CardMovie key ={movies.id} {...movies} catchmovieinformation={catchmovieinformation} />) 
             :listLength === 20 && genre === undefined 
-            ?movieInformation.map((movies) => <CardMovie key ={movies.id} {...movies}/>)
-            :listLength === 20 && genre!= undefined
-            ?loading ? <div>Loading</div> : topGenres.map((movies) => <CardMovie key ={movies.id} {...movies}/>)  
+            ?movieInformation.map((movies) => <CardMovie key ={movies.id} {...movies} catchmovieinformation={catchmovieinformation}/>)
+            :listLength === 20 && genre!== undefined
+            ?loading ? <div>Loading</div> : topGenres.map((movies) => <CardMovie key ={movies.id} {...movies} catchmovieinformation={catchmovieinformation}/>)  
             : 'erro'
             }
         </div>

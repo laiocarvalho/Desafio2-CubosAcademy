@@ -1,9 +1,18 @@
-
 .carrinhocomcompra{
     display: flex;
-    background-color: gray;
     width: 100%;
+    flex-direction: column;
+    align-items:flex-start;
 }
+
+.shoplist-subtotal-conteiner{
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;  
+    border-bottom: 1px solid white;
+}
+
 
 .botaodecompra{
     position: absolute;

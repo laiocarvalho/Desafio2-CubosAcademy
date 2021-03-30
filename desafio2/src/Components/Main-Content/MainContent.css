@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Open+Sans:wght@600&display=swap');
+
 .main-content-conteiner{
     display: flex;
-    border: 1px solid red;
     min-height: 100vh;
     align-items: flex-start;
 }
 
 .main-content-column{
-    border: 2px solid purple;
     display: flex;
     flex-direction: column;
     margin-left: 90px;
@@ -21,42 +22,50 @@
     font-weight: bold;
     font-family: sans-serif;
     margin-top: 20px;
+    font-family: 'Manrope', sans-serif;
 }
 
 .main-content-genres-list{
     list-style-type: none;
     margin-top: 10px;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-between; 
 }
 
 .main-content-genres-list-field{
+    margin-left: -23px;
     visibility: hidden;
 }
 
 .main-content-genre-title{
-    border: 1px solid white;
-    padding: 10px 35px;
-    color: white;
-    min-width: 130px;
+    border: 1px solid #4a4e51;
+    padding: 10px;
+    color: #4a4e51;
+    min-width: 180px;
     text-align: center;
     cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    
 }
 
  .main-content-genres-list-field:checked + .main-content-genre-title{
     background-color: rgba(225, 131, 200, 0.2);
     border: 1px solid #E183C8;
+    color: #E183C8;
+}
+
+.main-content-genres-list-field:hover + .main-content-genre-title{
+    background-color: rgba(22, 22, 22, 0.719);
+    border: 1px solid #E183C8;
+    color: #E183C8;
 }
 
 
 
 .aside-column{
     width: 40vw;
-    min-height: 100vh;
-    max-height: 100vh;    
+    min-height: 500px;
     display: flex;
     justify-content: center;
     text-align: center;
-   
 }

@@ -1,0 +1,47 @@
+
+.purchase-item-information-content{
+    display: flex;
+    height: 105px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    
+    margin-bottom: 10px;
+}
+
+.purchase-item-information-content-poster{
+    height: 100px; 
+    min-width: 65px;
+}
+
+.purchase-item-information-content-priceandtitle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 12px;
+    width: 100%
+}
+
+
+.deleteAdd-button-conteiner{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    width: 70px;
+    justify-content: space-between;
+}
+
+.deleteAdd-button-style{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.price-button-conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+}

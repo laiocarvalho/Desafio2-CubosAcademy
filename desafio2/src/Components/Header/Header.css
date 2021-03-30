@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
 .main-header{
     display: flex;
     background-color: #0F1C26;
@@ -5,14 +7,18 @@
     align-items: center;
     justify-content: center;
     min-height:50px ;
+    width: auto;
+    font-family: 'Manrope', sans-serif;
     
 }
+
+
 
 .centraliza-main-header{
     display: flex;
     min-width: 90%;
-    
     justify-content: space-between;
+  
 }
 
 .centraliza-main-header > div{
@@ -39,6 +45,7 @@
     border: none;
     color: white;
     outline: none;
+    
 }
 
 .main-header-profile-information{

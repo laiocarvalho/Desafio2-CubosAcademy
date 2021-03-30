@@ -3,7 +3,7 @@ import './CardMovie.css'
 import { AiOutlineStar } from 'react-icons/ai'
 
 
-function CardMovie({title, poster_path,price,vote_average, onCliick}) {    
+function CardMovie({title, poster_path,price,vote_average, catchmovieinformation,id}) {    
    
     const editatitulo =()=>{
         const novotitulo = title.slice(0,15)+ "...";
@@ -13,7 +13,6 @@ function CardMovie({title, poster_path,price,vote_average, onCliick}) {
     return (
         <div className="card">
            <div className="movie-card-information">
-          
                <img className="movie-poster" src={poster_path} alt="#"/>
                <div className='teste'>
                <span className="movie-title">{title.length > 17 ? editatitulo() : title}</span>
@@ -24,9 +23,7 @@ function CardMovie({title, poster_path,price,vote_average, onCliick}) {
                </div>
            </div>
            <div className="movie-card-footer">
-                <button onClick={()=>{
-                   alert('clicou no filme' + title)
-                }}>
+                <button onClick={()=>{catchmovieinformation(title, id, price, poster_path)}}>
                     <span>Sacola</span>
                     <span>R$ {price}</span>
                 </button>
