@@ -15,9 +15,9 @@ export default function Shoplist({Botao}) {
   const getCupomInputValue = event=>{
     const target = event.target;
     const valor = target.value;
-    setcupomInputValue(valor)
-  }
-  
+    setcupomInputValue(valor);
+  };
+
   return (
     <div className="shoplist-conteiner">
       <header className="shoplist-header"><img src={bag} alt="#"/> Sacola</header>

@@ -1,3 +1,4 @@
+
 import React, {useState} from 'react'
 import BannerPromocional from '../BannerPromocional/BannerPromocional'
 import ConfirmData from '../Buttons/ConfirmData'
@@ -60,6 +61,7 @@ export default function MainContent() {
             <div className="aside-column">
                 <Shoplist  Botao={<ConfirmData/>}/>
             </div>
-        </div>
-    )
+            </div>
+
+  );
 }

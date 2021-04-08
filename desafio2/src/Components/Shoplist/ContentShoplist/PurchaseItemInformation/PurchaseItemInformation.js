@@ -38,6 +38,6 @@ export default function PurchaseItemInformation({
                     {MovieTitle}
                 </div>
             </div>
-        </div>
+          </div>
     )
-}
+  }
