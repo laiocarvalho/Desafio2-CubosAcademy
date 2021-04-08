@@ -1,42 +1,42 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './PurchaseItemInformation.css';
 import add from "../../../../Images/add.png";
-import deletee from "../../../../Images/delete.png"
+import deletee from "../../../../Images/delete.png";
+import {ShoplistContainer} from '../../../../Providers/ShoplistContext'
 
-export default function PurchaseItemInformation({movieTitle, movieId, moviePrice, posterPath, qtdNoCarrinho }) {
-    
-    const [movieCount, setmovieCount] = useState(0);
-    
-    const incrementaQtdMovies = ()=>{
-        setmovieCount(movieCount + 1)
-    }
-    const decrementaQtdMovies = ()=>{
-        setmovieCount(movieCount - 1)
-    }
-    const FinalMovieCount = qtdNoCarrinho + movieCount ;
+export default function PurchaseItemInformation({
+    MovieTitle, 
+    MovieId, 
+    MoviePrice, 
+    MoviePoster, 
+    qtdNoCarrinho
+}) {
+    const {incrementaQtdMovies, decrementaQtdMovies} = ShoplistContainer.useContainer()
     
     return (
         <div className="purchase-item-information-content">
          
-            <img className="purchase-item-information-content-poster" src={posterPath} />
+            <img className="purchase-item-information-content-poster" src={MoviePoster} alt="#"/>
             <div className="purchase-item-information-content-priceandtitle">
                 <div className="price-button-conteiner">
-                    <span>R$ {moviePrice}</span>
+                    <span>R$ {MoviePrice}</span>
                     <div className="deleteAdd-button-conteiner">
                         <button className="deleteAdd-button-style purchase-item-information-addbutton" 
-                                onClick={incrementaQtdMovies}
+                                onClick={()=>incrementaQtdMovies(MovieId)}
                                 >
-                                <img src={add}/>
+                                <img src={add} alt="#"/>
                         </button>
-                        <span >{FinalMovieCount}</span>
+                        <span >{qtdNoCarrinho}</span>
                         <button className="deleteAdd-button-style purchase-item-information-deletebutton"
-                                onClick={decrementaQtdMovies}
+                                onClick={()=>decrementaQtdMovies(MovieId)}
                                 >
-                                <img src={deletee}/>
+                                <img src={deletee} alt="#"/>
                         </button>
                     </div>
                 </div>
-                <span>{movieTitle}</span>
+                <div className="purchase-information-movie-title-container">
+                    {MovieTitle}
+                </div>
             </div>
         </div>
     )

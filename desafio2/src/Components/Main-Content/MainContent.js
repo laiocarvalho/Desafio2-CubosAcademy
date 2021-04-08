@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import BannerPromocional from '../BannerPromocional/BannerPromocional'
+import ConfirmData from '../Buttons/ConfirmData'
 import CardMovieListAll from '../CardMovie/CardMovieListAll/CardMovieListAll'
 import Shoplist from '../Shoplist/Shoplist'
 import './MainContent.css'
@@ -7,15 +8,7 @@ import './MainContent.css'
 
 export default function MainContent() {
     const [genero, setgenero] = useState();
-    const [cupomText, setcupomText] = useState();
-    const [shopList, setShopList] = useState([]);
-    const [moviesAmount, setmoviesAmount] = useState();
-
-    const onClickBanner = (el)=>{
-       const cupomtext = el
-       setcupomText(cupomtext)
-    }
-
+   
     const getGenre = ()=>{
         if(genero === 'Ação'){
             return "Ação";
@@ -34,42 +27,12 @@ export default function MainContent() {
         setgenero(genero)  
     }
     
-   const catchmovieinformation= (titulo, id, preço, poster)=>{
-    let existe = false;
-    
-    const movieInformationToShoplist = {
-        movieTitle: titulo,
-        movieId: id,
-        moviePrice: preço,
-        posterPath: poster,
-        qtdNoCarrinho: 1
-    }
-    
-    if (shopList.length === 0) {
-        setShopList(shopList.concat(movieInformationToShoplist))
-    }
-    
-    for (let i = 0; i < shopList.length; i++) {
-        if(shopList[i].movieId === movieInformationToShoplist.movieId){
-            console.log('encontrou');
-            existe = true;
-            shopList[i].qtdNoCarrinho++;
-            setmoviesAmount(shopList[i].qtdNoCarrinho)
-            break;
-        }   
-    }
-
-    if(existe === false){
-        setShopList(shopList.concat(movieInformationToShoplist))
-    } 
-    }
-  
     return (
         <div className="main-content-conteiner">
             <div className="main-content-column">
-                <BannerPromocional onClick = { onClickBanner }/>
+                <BannerPromocional/>
                 <h3 className="main-content-titles">Top Filmes</h3>
-                <CardMovieListAll listLength ={5} catchmovieinformation={catchmovieinformation} />
+                <CardMovieListAll listLength ={5} />
                 <h3 className="main-content-titles">Filmes</h3>
                 <div className="main-content-genres-list">
                     <input type="radio" name="genreinput" class="main-content-genres-list-field" id="allmovies"
@@ -92,11 +55,10 @@ export default function MainContent() {
                     value="Terror" onChange={changeGenre}/>
                     <label for="horrormovies" class="main-content-genre-title" >Terror</label>
                 </div>
-                <CardMovieListAll genre = { getGenre()} listLength ={20} catchmovieinformation={catchmovieinformation} />
+                <CardMovieListAll genre = { getGenre()} listLength ={20} />
             </div>
             <div className="aside-column">
-                
-                <Shoplist inputValue ={cupomText} shopList = {shopList}/>
+                <Shoplist  Botao={<ConfirmData/>}/>
             </div>
         </div>
     )

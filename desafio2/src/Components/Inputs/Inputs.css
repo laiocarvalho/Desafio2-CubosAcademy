@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+div{
+    font-family: 'Manrope', sans-serif;
+}
+label{
+    font-size: .8em;
+    margin-bottom: 20px;
+}
+.inputs-input-style{
+    background-color: rgba(11, 18, 23, 1);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    padding-left: 10px;
+    min-width: 228px;
+    min-height: 40px;
+    font-size: 1em;
+    margin-top: 5px;
+    width: 328px;
+    margin-bottom: 20px;
+}
+
+.inputs-input-style:focus{
+    border: 1px solid white;
+}

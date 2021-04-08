@@ -2,18 +2,19 @@
 
 .shoplist-conteiner{
     margin-top: 40px;
-    min-width: 300px;
+    min-width: 350px;
+    width: 100%;
     background-color: #00000081;
     color: white;
     display: flex;
-    margin-right: -100px;
     flex-direction: column;
     border-radius: 8px;
+    min-height: 500px;
 }
 
 .shoplist-header{
     background-color: #A785ED;
-    height: 100px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,23 +23,19 @@
     font-family: 'Manrope', sans-serif;
 }
 
-
 .shoplist-content{
     display: flex;
-    border: 1px;
-    justify-content: center;
-    height: 100%;
-    margin-top: 10px;
+    align-items: center;
+    margin-top: 50px;
     font-family: 'Manrope', sans-serif;
+    flex-direction: column;
 }
 
 .shoplist-conteiner-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     margin-bottom: 20px;
     margin-left: 10%;    
     font-family: 'Manrope', sans-serif;
+    margin-top: auto;
 }
 
 .shoplist-cupom-input{
@@ -47,7 +44,8 @@
     outline: none;
     background-color:#2b32387e;
     height: 40px;
-    min-width: 90%;
+    max-width: 90%;
+    width: 100%;
     color: white;
     margin-top: 2px;
     font-family: 'Manrope', sans-serif;
@@ -57,7 +55,8 @@
     border: none;
     outline: none;
     height: 40px;
-    min-width: 90%;
+    max-width: 90%;
+    width: 100%;
     background-color: #E25EBF;
     color: white;
     font-weight: bold;
@@ -65,13 +64,8 @@
     cursor: pointer;
 }
 
+.shoplist-confirm-button-style:hover{
+    background-color: rgba(252, 146, 217, 0.897)
+}
 
-
-/* 
-.empty-shoplist-image{
-    align-self: center;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-} */
 

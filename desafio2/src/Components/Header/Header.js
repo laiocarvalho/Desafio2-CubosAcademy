@@ -4,13 +4,13 @@ import Logo from '../../Images/Logo.png'
 import {BsSearch} from 'react-icons/bs'
 import {MdFavoriteBorder} from 'react-icons/md'
 import {AiOutlineDollarCircle} from 'react-icons/ai'
-
+import {Link} from 'react-router-dom'
 export default function Header() {
     return (
         <div className="main-header">
             <div className="centraliza-main-header">
                 <div>
-                    <img src={Logo} className="main-header-logo" alt="#"/>
+                    <Link to="/"><img src={Logo} className="main-header-logo" alt="#"/></Link>
                     <div className="input-button-conteiner">
                     <input className="main-header-search-input"type="text" placeholder="Pesquise filmes.."/>
                     <button className="main-header-search-button"><BsSearch/></button>
@@ -22,7 +22,7 @@ export default function Header() {
                 </ul>
 
                 <div className="main-header-profile-information">
-                    <span>Bem vindo fulano</span>
+                    <span>Bem vindo</span>
                     <img src="https://picsum.photos/200"  className="main-header-profile-image" alt="#"/>
                 </div>
             </div>

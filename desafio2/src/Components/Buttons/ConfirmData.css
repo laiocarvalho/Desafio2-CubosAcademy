@@ -1,0 +1,17 @@
+
+.shoplist-confirm-purchase-button-style:disabled{
+    background-color: #cccc;
+}
+
+.shoplist-confirm-purchase-button-style{
+    background-color: #E25EBF;
+    border: none;
+    outline: none;
+    height: 40px;
+    max-width: 90%;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}

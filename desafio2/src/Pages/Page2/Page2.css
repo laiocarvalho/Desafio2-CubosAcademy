@@ -1,0 +1,32 @@
+.page2-wrapper{
+  display: flex;
+}
+.page2-main-column{
+  color: white;
+  max-width: 820px;
+  width: 100%;
+  margin-left: 140px;
+  margin-top: 60px;
+  margin-right: 90px;
+}
+
+.page2-information-container-style{
+  background-color: #171B1E;
+  margin-bottom: 30px;
+}
+
+.page2-information-title{
+  margin: 15px 0 15px 20px;
+}
+
+.page2-input-containers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.page2-aside-column{
+    margin-top: 35px;
+ }
+

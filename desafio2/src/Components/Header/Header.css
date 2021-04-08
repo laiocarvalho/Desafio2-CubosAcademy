@@ -3,22 +3,22 @@
 .main-header{
     display: flex;
     background-color: #0F1C26;
+   
     color: white;
-    align-items: center;
     justify-content: center;
     min-height:50px ;
-    width: auto;
     font-family: 'Manrope', sans-serif;
-    
 }
 
-
+.main-header-logo{
+    cursor: pointer;
+}
 
 .centraliza-main-header{
     display: flex;
-    min-width: 90%;
-    justify-content: space-between;
-  
+    max-width: 92%;
+    width: 100%;
+    justify-content: space-between; 
 }
 
 .centraliza-main-header > div{
@@ -28,8 +28,6 @@
 
 .main-header-links{
     display: flex;
-    align-items: center;
-    list-style-type: none;
 }
 
 .favoritos-link, .promocoes-link{
@@ -48,10 +46,7 @@
     
 }
 
-.main-header-profile-information{
-    margin: 0;
-    padding: 0;
-}
+
 .main-header-profile-information > span{
     margin-right: 15px;
 }
@@ -60,21 +55,23 @@
 }
 
 .input-button-conteiner{
-    display: flex;
-    align-items: center;
-    background-color: white;
     padding: 5px;
     border-radius: 5px;
+    background-color: #2b3238;
+    
 }
 
 .main-header-search-input{
-    min-width: 90%;
     border: none;
     outline: none;
+    background-color: #2b3238;
+    color: white;
+    
 }
 .main-header-search-button{
     cursor: pointer;
     outline: none;
     background-color: transparent;
     border: none;
+    color: white;
 }

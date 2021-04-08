@@ -1,29 +1,25 @@
 import React from 'react'
 import './CardMovie.css'
 import { AiOutlineStar } from 'react-icons/ai'
+import {ShoplistContainer} from '../../Providers/ShoplistContext'
 
-
-function CardMovie({title, poster_path,price,vote_average, catchmovieinformation,id}) {    
-   
+function CardMovie({id,title, poster_path,vote_average, price  }) {    
+    const {catchMovieInformation} = ShoplistContainer.useContainer()
     const editatitulo =()=>{
-        const novotitulo = title.slice(0,15)+ "...";
+        const novotitulo = title.slice(0,14)+ "...";
         return novotitulo;  
     }
     
     return (
         <div className="card">
-           <div className="movie-card-information">
-               <img className="movie-poster" src={poster_path} alt="#"/>
-               <div className='teste'>
-               <span className="movie-title">{title.length > 17 ? editatitulo() : title}</span>
+            <img className="movie-poster" src={poster_path} alt="#"/>
+           <div className="movie-card-footer">
+                <span className="movie-title">{title.length > 15 ? editatitulo() : title}</span>
                 <div className="movie-card-avaliation-conteiner">
                     <AiOutlineStar className="movie-card-star-icon"/>
                     <span className="movie-card-avaliation">{vote_average}</span>
                 </div>
-               </div>
-           </div>
-           <div className="movie-card-footer">
-                <button onClick={()=>{catchmovieinformation(title, id, price, poster_path)}}>
+                <button onClick={()=>catchMovieInformation( id, title, price, poster_path)}>
                     <span>Sacola</span>
                     <span>R$ {price}</span>
                 </button>

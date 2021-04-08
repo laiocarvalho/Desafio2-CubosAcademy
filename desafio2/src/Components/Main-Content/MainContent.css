@@ -3,18 +3,15 @@
 
 .main-content-conteiner{
     display: flex;
-    min-height: 100vh;
-    align-items: flex-start;
+    max-width: 100vw;
+    width: 100%;
 }
 
 .main-content-column{
-    display: flex;
-    flex-direction: column;
     margin-left: 90px;
     position: relative;
-    min-height: 100vh;
-    min-width: 945px;
     max-width: 945px;
+    margin-right: 20px;
 }
 
 .main-content-titles{
@@ -41,11 +38,11 @@
     border: 1px solid #4a4e51;
     padding: 10px;
     color: #4a4e51;
-    min-width: 180px;
+    max-width: 180px;
+    width: 100%;
     text-align: center;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
-    
 }
 
  .main-content-genres-list-field:checked + .main-content-genre-title{
@@ -60,12 +57,8 @@
     color: #E183C8;
 }
 
-
-
 .aside-column{
-    width: 40vw;
+    margin-top: 15px;
+    margin-left: 50px;
     min-height: 500px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
 }

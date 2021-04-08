@@ -7,7 +7,9 @@
 body{
     background-color: #1d2226;
     min-height: 100vh;
-    max-height: 100vh;
-    
+    max-width: 200vw;
+    width: 100%;
+ 
+    flex-shrink: auto;
 }
 
