@@ -8,5 +8,7 @@ Surgiram alguns problemas conhecidos no andamento do projeto como o prop drillin
 de contextos, uma ferramenta que não conhecia mas senti a necessidade assim que precisei fazer a segunda página do site com o 
 React Router, já que iria ter um componente sem parentesco direto para passagem de props. 
 Com isso acabei conseguindo amenizar o problema do prop drilling. \o/
-
-
+<hr>
+<img src="https://user-images.githubusercontent.com/79883041/114251274-de516900-9976-11eb-98b4-714c5ec66bb6.png"/>
+<hr>
+<img src="https://user-images.githubusercontent.com/79883041/114251277-df829600-9976-11eb-9914-48575f3dfc95.png"/>
