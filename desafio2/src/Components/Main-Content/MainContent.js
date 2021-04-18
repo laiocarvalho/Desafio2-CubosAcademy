@@ -1,26 +1,15 @@
 
-import React, {useState} from 'react'
+import React from 'react'
 import BannerPromocional from '../BannerPromocional/BannerPromocional'
 import ConfirmData from '../Buttons/ConfirmData'
 import CardMovieListAll from '../CardMovie/CardMovieListAll/CardMovieListAll'
 import Shoplist from '../Shoplist/Shoplist'
+import {MovieContainer} from '../../Providers/MovieContext'
 import './MainContent.css'
 
 
 export default function MainContent() {
-    const [genero, setgenero] = useState();
-   
-    const getGenre = ()=>{
-        if(genero === 'Ação'){
-            return "Ação";
-        }else if(genero === 'Romance'){
-            return "Romance";
-        }else if(genero === 'Ficção Cientifica'){
-            return "Ficção científica";
-        }else if(genero === 'Terror'){
-            return "Terror";
-        }
-    }
+    const {setgenero} = MovieContainer.useContainer();
     
     const changeGenre = event =>{
         const target = event.target
@@ -49,19 +38,18 @@ export default function MainContent() {
                     <label for="romancemovies" class="main-content-genre-title">Romance</label>
 
                     <input type="radio" name="genreinput" class="main-content-genres-list-field" id="fictionmovies" 
-                    value="Ficção Cientifica" onChange={changeGenre}/>
+                    value="Ficção científica" onChange={changeGenre}/>
                     <label for="fictionmovies" class="main-content-genre-title">Ficção Científica</label>
 
                     <input type="radio"  name="genreinput" class="main-content-genres-list-field" id="horrormovies"  
                     value="Terror" onChange={changeGenre}/>
                     <label for="horrormovies" class="main-content-genre-title" >Terror</label>
                 </div>
-                <CardMovieListAll genre = { getGenre()} listLength ={20} />
+                <CardMovieListAll listLength ={20} />
             </div>
             <div className="aside-column">
                 <Shoplist  Botao={<ConfirmData/>}/>
             </div>
             </div>
-
   );
 }

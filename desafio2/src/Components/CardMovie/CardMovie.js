@@ -12,7 +12,13 @@ function CardMovie({id,title, poster_path,vote_average, price  }) {
     
     return (
         <div className="card">
-            <img className="movie-poster" src={poster_path} alt="#"/>
+            <div className="card-poster-container">
+                <img className="movie-poster" src={poster_path} alt="#" />
+                <div className="card-movie-filter">
+                    <button className="movie-card-more-information-button">Mais Informações</button>
+                </div>
+            </div>
+            
            <div className="movie-card-footer">
                 <span className="movie-title">{title.length > 15 ? editatitulo() : title}</span>
                 <div className="movie-card-avaliation-conteiner">
