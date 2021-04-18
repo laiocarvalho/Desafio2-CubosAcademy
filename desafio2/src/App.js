@@ -7,6 +7,7 @@ import {ShoplistContainer} from './Providers/ShoplistContext'
 import {MovieContainer} from './Providers/MovieContext';
 import Page2 from "./Pages/Page2/Page2";
 import Page3 from "./Pages/Page3/Page3";
+import MoreInfoMoviePage from "./Pages/MoreInfoMoviePage/MoreInfoMoviePage";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                   <Route path ='/' exact component={MainContent}/>
                   <Route path ='/page2'  component={Page2}/>
                   <Route path ='/page3'  component={Page3}/>
+                  <Route path ='/MovieInfo/:id' component={MoreInfoMoviePage}/>
                 </Switch>
               </div>
             </ShoplistContainer.Provider>

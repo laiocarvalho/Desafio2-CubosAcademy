@@ -16,7 +16,7 @@ const ShoplistProvider = () =>{
       MoviePoster:poster,
       qtdNoCarrinho:1
     }
-
+    
     const index = shopList.findIndex((i)=> i.MovieId === id);
 
     if(index !== -1){

@@ -2,8 +2,9 @@ import React from 'react'
 import './CardMovie.css'
 import { AiOutlineStar } from 'react-icons/ai'
 import {ShoplistContainer} from '../../Providers/ShoplistContext'
+import {Link} from 'react-router-dom'
 
-function CardMovie({id,title, poster_path,vote_average, price  }) {    
+function CardMovie({id,title, poster_path,vote_average, price }) {    
     const {catchMovieInformation} = ShoplistContainer.useContainer()
     const editatitulo =()=>{
         const novotitulo = title.slice(0,14)+ "...";
@@ -15,7 +16,7 @@ function CardMovie({id,title, poster_path,vote_average, price  }) {
             <div className="card-poster-container">
                 <img className="movie-poster" src={poster_path} alt="#" />
                 <div className="card-movie-filter">
-                    <button className="movie-card-more-information-button">Mais Informações</button>
+                    <Link to={`/MovieInfo/${id}`}><button className="movie-card-more-information-button">Mais Informações</button></Link>
                 </div>
             </div>
             
